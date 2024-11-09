@@ -96,7 +96,7 @@ export function TicketManagement() {
       const employeeId = payload?.id;
 
       if (employeeId) {
-        fetch("http://127.0.0.1:5000/api/v1/employees/", {
+        fetch("https://liwan-back.vercel.app/api/v1/employees/", {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -109,7 +109,7 @@ export function TicketManagement() {
             if (employee) {
               setEmployeeData(employee);
 
-              fetch("http://127.0.0.1:5000/api/v1/tickets/getMyTickets", {
+              fetch("https://liwan-back.vercel.app/api/v1/tickets/getMyTickets", {
                 headers: {
                   Authorization: `Bearer ${accessToken}`,
                 },
